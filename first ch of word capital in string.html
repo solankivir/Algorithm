@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>2</title>
+<meta charset="UTF-8">
+
+<script type="type/javascript">
+String.prototype.capitalize = function(){
+   return this.replace( /(^|\s)([a-z])/g , function(m,p1,p2){ return p1+p2.toUpperCase(); } );
+  };
+
+  capitalizedString = someString.capitalize();
+
+function capWords() {
+var inputString = document.form1.instring; // The input text field
+var outputString = document.form1.outstring; // The output text field
+outputString.value = inputString.value.capitalize();
+}
+</script>
+
+
+</head>
+
+<body >
+<form name="form1" method="post">
+<input name="instring" type="text" value="this is the text string" size="30">
+<input type="button" name="Capitalize" value="Capitalize >>" onClick="capWords();">
+<input name="outstring" type="text" value="" size="30">
+</form>
+</body>
+
+
+</html>
+
