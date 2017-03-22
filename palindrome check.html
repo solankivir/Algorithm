@@ -1,0 +1,25 @@
+<html>
+
+<!-- a word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run. -->
+<head>
+<script type="text/javascript">
+function palindrome(str) {
+  // Good luck!
+  str = prompt("please enter your string","");
+   var newstr = str.replace(/[^A-Za-z0-9]/g,'').toLowerCase();
+      return alert(newstr === newstr.split('').reverse().join('').toLowerCase());
+}
+</script>
+
+
+
+</head>
+<body>
+	
+	<button type="submit" onclick="palindrome()"> Check Palindrome </button>
+
+</body>
+
+
+
+</html>
