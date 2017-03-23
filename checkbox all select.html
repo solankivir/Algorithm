@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>2</title>
+<meta charset="UTF-8">
+
+</head>
+
+<body >
+<h2> Which language do you know</h2>
+
+    <input type="checkbox" id="select_all"> <h3> Select All </h3>
+    <input class="checkbox" type="checkbox" name="check[]"> javascript
+    <input class="checkbox" type="checkbox" name="check[]"> java
+    <input class="checkbox" type="checkbox" name="check[]"> python
+    <input class="checkbox" type="checkbox" name="check[]"> jquery
+    <input class="checkbox" type="checkbox" name="check[]"> Angular
+    <input class="checkbox" type="checkbox" name="check[]"> hadoop
+
+<script type="text/javascript">
+var select_all = document.getElementById("select_all");
+var checkboxes = document.getElementsByClassName("checkbox");
+
+
+select_all.addEventListener("change", function(e){
+    for (i = 0; i < checkboxes.length; i++) { 
+        checkboxes[i].checked = select_all.checked;
+    }
+});
+
+
+	for (var i=0; i<checkboxes.length;i++){
+		checkboxes[i].addEventListener("change", function(e){
+		if (this.checked == false){
+			select_all.checked == false;
+			}
+	});
+}
+</script>
+
+</body>
+
+
+</html>

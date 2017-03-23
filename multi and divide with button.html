@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript">
+var current = new Date();
+var christmas = new Date(current.getFullYear(),11,25);
+var timediff = Math.abs(christmas.getTime() - current.getTime());
+var count = Math.ceil( timediff / (1000*60*60*24) );
+document.write(count);
+</script>
+</head>
+
+
+<body>
+</body>
+<form>
+	<tr>
+		<td> 1st number: </td> 
+		<td> <input type="text" id="firstno" /> </td>
+	</tr>
+	
+	<tr>
+		<td> 2nd number: </td> 
+		<td> <input type="text" id="secondno" /> </td>
+	</tr>
+
+
+</form>
+
+
+</html>
