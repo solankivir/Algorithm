@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>hex to RGB converter</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"> </script>
+
+<script type="text/javascript">
+function hexToR(elem) {var x = parseInt((Hexslice(elem)).substring(0,2),16);
+					   document.getElementById("red").innerHTML = x; 
+					   }
+function hexToG(elem) {var y = parseInt((Hexslice(elem)).substring(2,4),16);
+				    document.getElementById("green").innerHTML = y;
+					}
+function hexToB(elem) {var z = parseInt((Hexslice(elem)).substring(4,6),16);
+					document.getElementById("blue").innerHTML = z; 
+					}
+function Hexslice(elem){
+elem = document.getElementById("text").value;
+return (elem.charAt(0)=="#") ? elem.substring(1,7):elem
+hexToR(elem);
+hexToG(elem);
+hexToB(elem);
+}
+
+</script>
+</head>
+	
+<body >
+<p>Please enter Hex color code <input type="text" id="text" /> </p>
+<input type="button" value="Hex to RGB coverter" onclick="Hexslice()"/> 
+<br/><br/>
+R:<input type="text" id="Red" />
+G:<input type="text" id="Green" />
+B:<input type="text" id="Blue" /> 	
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"> </script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
+</body>
+
+
+</html>
